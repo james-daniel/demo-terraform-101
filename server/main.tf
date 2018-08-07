@@ -29,6 +29,7 @@ resource "aws_instance" "web" {
     "Identity"   = "${var.identity}"
     "Created by" = "Terraform"
   }
+}
 
 output "public_ip" {
   value = ["${aws_instance.web.*.public_ip}"]
